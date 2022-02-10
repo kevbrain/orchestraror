@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: orchestraror-secret-0
+  labels:
+    app: orchestraror    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 

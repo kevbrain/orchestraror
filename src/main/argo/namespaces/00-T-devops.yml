@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: devops-trigger
+  namespace: devops
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: devops-triggerbinding
+  template:
+    ref: devops-triggertemplate

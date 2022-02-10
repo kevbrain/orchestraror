@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: devops-eventlistener
+  namespace: devops
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: devops-trigger
